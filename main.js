@@ -118,3 +118,51 @@ function myKeyDown(e)
         console.log("c");
     }
 }
+
+function up()
+{
+    if(playerY >=0)
+    {
+        playerY = playerY - blockImageHeight;
+        console.log("altura da imagem do bloco = " + blockImageHeight);
+        console.log("Quando a tecla direcional Cima for pressionada, X = " + playerX + ", Y = " + playerY);
+        canvas.remove(playerObject);
+        playerUpdate();
+    }
+}
+
+function down()
+{
+    if(playerY <=500)
+    {
+        playerY = playerY + blockImageHeight;
+        console.log("altura da imagem do bloco = " + blockImageHeight);
+        console.log("Quando a tecla direcional Baixo for pressionada, X = " + playerX + " , Y = " + playerY);
+        canvas.remove(playerObject);
+        playerUpdate();
+    }
+}
+
+function left()
+{
+    if(playerX >=0)
+    {
+        playerX = playerX - blockImageWidth;
+        console.log("Largura da imagem do bloco" + blockImageWidth);
+        console.log("Quando a tecla direcional Esquerda for pressionada, X = " + playerX + " , Y = " + playerY);
+        canvas.remove(playerObject);
+        playerUpdate()
+    }
+}
+
+function right()
+{
+    if(playerX <=850)
+    {
+        playerX = playerX + blockTmageWidth;
+        console.log("largura da imagem do bloco = " + blockImageWidth);
+        console.log("Quando a tecla direcional Direita for pressionada, X " + playerX + " , Y = " + playerY);
+        canvas.remove(playerObject);
+        playerUpdate()
+    }
+}
